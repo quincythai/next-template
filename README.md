@@ -24,7 +24,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 2. Use Tailwind CSS utility classes to style components. If it gets repetitive, consider creating a new component.
 3. We use TypeScript, ESLint, and Prettier to ensure type safety and good code quality. Install the relevant plugins for your editor and feel free to use `npm run lint` to check for any issues.
 4. Do **NOT** use `useEffect`!! It almost always isn't necessary and can lead to bugs and incomprehensible code. It should never be used for synchronizing state. Next.js has builtin primitives for fetching data now, so use those instead if you need to fetch data.
-5. Import files using **absolute paths**! By default, `@` is an alias for the project directory, so instead of importing from '../../../components/something', use `@/components/something'`. This is much easier to read.
+5. Import files using **absolute paths**! By default, `@` is an alias for the project directory, so instead of importing from `../../../components/something`, use `@/components/something'`. This is much easier to read.
 6. Don't push to `main` directly! Instead, create a new branch and open a pull request. Issue tracking software (e.g. Linear) automatically generates branch names and will link them directly -- use those.
 
 ## Command Reference
