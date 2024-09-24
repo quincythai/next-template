@@ -1,5 +1,7 @@
 # WDB Full-Stack Next.js Template
 
+Please read the entirety of this README before starting development. There's a lot of useful information here!
+
 ## Getting Started
 
 First, run the development server:
@@ -17,6 +19,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 1. Update the metadata in `app/layout.tsx` with a proper title and description.
 2. Download any required fonts in `app/fonts` and import them into `app/layout.tsx`, propertly passing the classname to the root layout element.
 3. Update `favicon.ico` with a project-specific favicon.
+4. Update `tailwind.config.ts` with the color scheme, fonts, and sizes you want to use for the project. This will make it so that you can do e.g. `text-primary` instead of `text-blue-500` everywhere.
 
 ## Best Practices
 
