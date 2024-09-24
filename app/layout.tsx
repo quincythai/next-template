@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { SwitchContextProvider } from "@/context/SwitchContext";
 
 // TODO: Replace this with the fonts that designers provide.
 const geistSans = localFont({
@@ -16,12 +17,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} antialiased`}>{children}</body>
+      <SwitchContextProvider>
+        <body className={`${geistSans.variable} antialiased`}>{children}</body>
+      </SwitchContextProvider>
     </html>
   );
 }
