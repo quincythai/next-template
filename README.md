@@ -17,18 +17,30 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 ## First Steps
 
 1. Update the metadata in `app/layout.tsx` with a proper title and description.
-2. Download any required fonts in `app/fonts` and import them into `app/layout.tsx`, propertly passing the classname to the root layout element.
+2. Download any required fonts in `app/fonts` and import them into `app/layout.tsx`, properly passing the classname to the root layout element.
 3. Update `favicon.ico` with a project-specific favicon.
 4. Update `tailwind.config.ts` with the color scheme, fonts, and sizes you want to use for the project. This will make it so that you can do e.g. `text-primary` instead of `text-blue-500` everywhere.
 
 ## Best Practices
 
-1. Keep the file structure as flat as possible -- don't nest components into deep folders! Instead, prefer to create reusable components in `app/components` and import them as needed. Next.js uses file-based routing, so page-specific components should go in their respective `page.tsx` file.
+1. Keep the file structure as flat as possible -- don't nest components into deep folders! Instead, prefer to create reusable components in `@/components` and import them as needed. Next.js uses file-based routing, so page-specific components should go in their respective `page.tsx` file.
 2. Use Tailwind CSS utility classes to style components. If it gets repetitive, consider creating a new component.
 3. We use TypeScript, ESLint, and Prettier to ensure type safety and good code quality. Install the relevant plugins for your editor and feel free to use `npm run lint` to check for any issues.
 4. Do **NOT** use `useEffect`!! It almost always isn't necessary and can lead to bugs and incomprehensible code. It should never be used for synchronizing state. Next.js has builtin primitives for fetching data now, so use those instead if you need to fetch data.
-5. Import files using **absolute paths**! By default, `@` is an alias for the project directory, so instead of importing from `../../../components/something`, use `@/components/something'`. This is much easier to read.
+5. Import files using **absolute paths**! By default, `@` is an alias for the project directory, so instead of importing from `../../../components/something`, use `@/components/something`. This is much easier to read.
 6. Don't push to `main` directly! Instead, create a new branch and open a pull request. Issue tracking software (e.g. Linear) automatically generates branch names and will link them directly -- use those.
+
+## UI Components
+
+We're using Radix UI Primitives for building UI components. These are a set of low-level components that can be used to build more complex components. They are designed to be unstyled by default, so you can style them however you want. You can find the documentation [here](https://www.radix-ui.com/primitives/docs/overview/introduction).
+
+You'll have to install each of them separately. We've installed `@radix-ui/react-switch` as an example. If you want to install another one, use the following command:
+
+```bash
+npm install @radix-ui/react-[component-name] --save-dev
+```
+
+Then, import the component and use it in your code. You can find the import statement in the documentation for each component.
 
 ## Command Reference
 
@@ -38,7 +50,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 ## Learn More
 
-This project uses Next.js, React, and Tailwind CSS. It is also configured with ESLint and Prettier, which will run before each commit to ensure good code quality when pushing to GitHub. Prettier is configured with the Tailwind plugin to automatically sort CSS classes consistently as well!
+This project uses Next.js, React, Tailwind CSS, and Radix UI Primitives. It is also configured with ESLint and Prettier, which will run before each commit to ensure good code quality when pushing to GitHub. Prettier is configured with the Tailwind plugin to automatically sort CSS classes consistently as well!
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -48,3 +60,7 @@ To learn more about Next.js, take a look at the following resources:
 To learn more about Tailwind CSS, take a look at the following:
 
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs) - learn about Tailwind CSS features and API.
+
+To learn more about Radix UI, take a look at the following:
+
+- [Radix UI Documentation](https://www.radix-ui.com/primitives/docs/overview/introduction) - learn about Radix UI Primitives.
