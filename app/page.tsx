@@ -7,7 +7,7 @@ export default function Home() {
         <span className="text-wdbBlue">Web Development</span> at Berkeley
       </h1>
       <p>
-        Full-stack web development project template . Check the README for more
+        Full-stack web development project template. Check the README for more
         information!
       </p>
       <CustomSwitch />
